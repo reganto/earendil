@@ -6,13 +6,18 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('uploader', '0003_video_elapsed_time'),
+        ("uploader", "0003_video_elapsed_time"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='video',
-            name='elapsed_time',
-            field=models.PositiveSmallIntegerField(blank=True, help_text='Elapsed time for video quality conversion', null=True, verbose_name='Elapsed Time'),
+            model_name="video",
+            name="elapsed_time",
+            field=models.PositiveSmallIntegerField(
+                blank=True,
+                help_text="Elapsed time for video quality conversion",
+                null=True,
+                verbose_name="Elapsed Time",
+            ),
         ),
     ]

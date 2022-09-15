@@ -6,18 +6,30 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('uploader', '0001_initial'),
+        ("uploader", "0001_initial"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='video',
-            name='video_240',
-            field=models.FileField(blank=True, help_text='240 video quality', null=True, upload_to='media/240/', verbose_name='240_quality'),
+            model_name="video",
+            name="video_240",
+            field=models.FileField(
+                blank=True,
+                help_text="240 video quality",
+                null=True,
+                upload_to="media/240/",
+                verbose_name="240_quality",
+            ),
         ),
         migrations.AlterField(
-            model_name='video',
-            name='video_360',
-            field=models.FileField(blank=True, help_text='360 video quality', null=True, upload_to='media/360/', verbose_name='360_quality'),
+            model_name="video",
+            name="video_360",
+            field=models.FileField(
+                blank=True,
+                help_text="360 video quality",
+                null=True,
+                upload_to="media/360/",
+                verbose_name="360_quality",
+            ),
         ),
     ]

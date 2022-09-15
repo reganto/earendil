@@ -7,18 +7,53 @@ class Migration(migrations.Migration):
 
     initial = True
 
-    dependencies = [
-    ]
+    dependencies = []
 
     operations = [
         migrations.CreateModel(
-            name='Video',
+            name="Video",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('title', models.CharField(help_text='Title of uploaded video', max_length=1024, verbose_name='Title')),
-                ('original', models.FileField(help_text='Original quality of uploaded video', upload_to='media/videos/', verbose_name='Original')),
-                ('video_240', models.FileField(help_text='240 video quality', upload_to='media/240/', verbose_name='240_quality')),
-                ('video_360', models.FileField(help_text='360 video quality', upload_to='media/360/', verbose_name='360_quality')),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                (
+                    "title",
+                    models.CharField(
+                        help_text="Title of uploaded video",
+                        max_length=1024,
+                        verbose_name="Title",
+                    ),
+                ),
+                (
+                    "original",
+                    models.FileField(
+                        help_text="Original quality of uploaded video",
+                        upload_to="media/videos/",
+                        verbose_name="Original",
+                    ),
+                ),
+                (
+                    "video_240",
+                    models.FileField(
+                        help_text="240 video quality",
+                        upload_to="media/240/",
+                        verbose_name="240_quality",
+                    ),
+                ),
+                (
+                    "video_360",
+                    models.FileField(
+                        help_text="360 video quality",
+                        upload_to="media/360/",
+                        verbose_name="360_quality",
+                    ),
+                ),
             ],
         ),
     ]
