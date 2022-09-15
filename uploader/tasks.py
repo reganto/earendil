@@ -60,6 +60,7 @@ def convert(video_pk):
         f2 = File(open(f"/tmp/{name}_360.mp4", "rb"))
         _video.video_240.save(name, f1)
         _video.video_360.save(name, f2)
+        # TODO: remove temporary videos
         end = perf_counter() - start
         _video.elapsed_time = end
         _video.save()
